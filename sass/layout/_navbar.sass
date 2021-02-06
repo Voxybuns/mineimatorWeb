@@ -1,0 +1,105 @@
+.nav__bar
+    position: fixed
+    top: 0
+    width: 100%
+    background: $surface_primary
+    z-index: 1000
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid $ink-borders
+
+.nav__logo
+    display: block
+    background: url('img/logo_mi.svg') center / contain no-repeat
+    height: 28px
+    width: 200px
+    margin-left: 1rem
+
+.nav__toggle
+    display: none
+
+.nav__icon
+    display: block;
+    height: 3rem
+    width: 3rem
+    cursor: pointer
+    background-image: url('img/menu.svg')
+    background-position: center
+    background-size: 20px
+    background-repeat: no-repeat
+    transition-property: background-image, opacity
+    transition-duration: 0.1s
+    transition-timing-function: ease-in-out
+    opacity: 57%
+    &:hover
+        opacity: 91%
+    
+.nav__toggle:checked ~ .nav__icon
+    background-image: url('img/close.svg')
+
+.nav__group
+    display: flex
+    flex-direction: column
+    width: 100%
+    overflow: hidden
+    transition: max-height .2s ease-in-out
+    max-height: 0
+
+.nav__toggle:checked ~ .nav__group
+    max-height: 30rem
+
+.nav__dropctn
+    display: none
+
+.nav__dropdown:hover .nav__dropctn
+    display: block;
+
+@media only screen and (max-width: calc(#{$desktop-sm} - 1px)) // Making the buttons behave like a list in the mobile menu
+    .nav__group .icon-left
+        display: none
+    .nav__group .button
+        padding: 0.5rem 1rem
+    .nav__group .button__primary, .nav__group .button__secondary
+        box-shadow: none
+        border: none
+        background-color: $surface-primary
+        color: $ink-secondary
+        &:hover
+            color: $ink-primary
+            background-color: $ink-hover
+        &:active
+            color: $ink-accent
+            background-color: $ink-pressed
+    .nav__dropctn .button
+        padding-left: 2rem
+
+@media only screen and (min-width: $desktop-sm)
+    .nav__group
+        flex-direction: row
+        width: auto
+        max-height: 25vh
+        margin-right: 1rem
+
+    .nav__group > *:not(:last-child)
+        margin-right: 0.5rem
+
+    .nav__logo
+        height: 40px
+        width: 300px
+        margin: 1rem
+
+    .nav__dropctn
+        position: absolute;
+        background-color: $surface-primary
+        padding: 0.5rem 0
+        border: 1px solid $ink-borders
+        min-width: 160px;
+        z-index: 1001;
+
+    .nav__dropctn .nav__link
+        padding-left: 0.75rem
+
+    .nav__icon
+        display: none

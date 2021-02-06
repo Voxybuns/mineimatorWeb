@@ -1,0 +1,38 @@
+// Variables
+
+$surface-primary: #ffffff
+$surface-secondary: #f0f0f0
+
+$ink: #000000
+$accent: #48B82C
+
+$ink-primary: rgba($ink, 0.9)
+$ink-secondary: rgba($ink, 0.6)
+$ink-tertiary: rgba($ink, 0.4)
+$ink-borders: rgba($ink, 0.15)
+$ink-button: rgba(255,255,255,1)
+$ink-hover: rgba($ink, 0.05)
+$ink-accent: rgba($accent, 1)
+$ink-accent-hover: lighten($ink-accent, 5%)
+$ink-accent-pressed: darken($ink-accent, 5%)
+$ink-focus: rgba($accent, 0.45)
+$ink-pressed: rgba($accent, 0.10)
+
+$font-secondary: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+$font-main: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+$tablet: 600px
+$desktop-sm: 1024px
+$desktop-lg: 1440px
+
+// Mixins
+
+@mixin bevel
+	box-shadow: 0px 3px 0px 0px rgba(255, 255, 255, 0.3) inset, 3px 0px 0px 0px rgba(255, 255, 255, 0.15) inset, 0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset, -3px 0px 0px 0px rgba(0, 0, 0, 0.1) inset
+
+@mixin gradient-text
+	color: $ink-accent
+	background: linear-gradient(270deg, #53CD35 0%, #18B557 100%)
+	-webkit-background-clip: text
+	background-clip: text
+	-webkit-text-fill-color: transparent

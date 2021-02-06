@@ -1,0 +1,45 @@
+body
+	font-family: $font-main
+	font-size: 1rem
+	color: $ink-primary
+	line-height: 1.5
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-secondary
+	line-height: 1.1
+	font-weight: 700
+
+h1
+	font-size: 3rem
+	margin-bottom: 1rem
+
+h2
+	font-size: 2rem
+	margin-bottom: 0.5rem
+	@include gradient-text
+
+.icon
+  display: inline-block
+  width: 1.5em
+  height: 1.5em
+  stroke-width: 0
+  stroke: currentColor
+  fill: currentColor
+
+.icon-right
+	margin-left: 0.5rem
+	margin-right: -0.25rem
+	&.icon-small
+		margin-right: -0.5rem
+
+.icon-left
+	margin-left: -0.25rem
+	margin-right: 0.5rem
+	&.icon-small
+		margin-left: -0.5rem
+
+@media only screen and (min-width: $desktop-lg)
+	html
+		font-size: 18px
+	h1
+		font-size: 4rem

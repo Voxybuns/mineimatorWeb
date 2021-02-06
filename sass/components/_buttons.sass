@@ -1,0 +1,47 @@
+.button
+    display: flex
+    align-items: center
+    padding: 0.25rem 1rem
+    font-family: $font-secondary
+    font-weight: 500
+    text-decoration: none
+    color: $ink-secondary
+    background-color: transparent
+    cursor: pointer
+    transition-property: color, background-color
+    transition-duration: 0.1s
+    transition-timing-function: ease-in-out
+    &:hover
+        color: $ink-primary
+        background-color: $ink-hover
+    &:active
+        color: $ink-accent
+        background-color: $ink-pressed
+    &:focus
+        outline: none
+    &:focus-visible
+        box-shadow: 0px 0px 0px 3px $ink-focus
+
+
+.button__primary
+    @include bevel
+    background-color: $ink-accent
+    color: $ink-button
+    &:hover
+        color: $ink-button
+        background-color: $ink-accent-hover
+    &:active
+        color: $ink-button
+        background-color: $ink-accent-pressed
+
+.button__secondary
+    border: solid 1px $ink-borders
+    color: $ink-secondary
+    &:hover
+        color: $ink-primary
+    &:active
+        color: $ink-accent
+
+.button__large
+    padding: 0.5rem 1.5rem
+    font-size: 1.25rem
