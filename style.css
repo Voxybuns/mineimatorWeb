@@ -1,0 +1,28 @@
+html {
+    background: linear-gradient(225deg, #FF957D 0%, #FF5492 100%);
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.logo {
+    height: 120px;
+}
